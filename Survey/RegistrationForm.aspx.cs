@@ -75,6 +75,8 @@ namespace Survey
                     db.Users.Add(user);
                     db.SaveChanges();
 
+                    StatusLabel.Text = "Заявка успешно отправлена!";
+
                     /* cmd.Parameters.AddWithValue("FirstName", tbFirstName.Text);
                     cmd.Parameters.AddWithValue("LastName", tbLastName.Text);
                     cmd.Parameters.AddWithValue("NameCompetition", tbNameCompetition.Text);
@@ -92,9 +94,20 @@ namespace Survey
                     cmd.Parameters.AddWithValue("Statistic", tbFirstName.Text);
 
                     cmd.ExecuteNonQuery();*/
-                } 
+                }
+                else
+                {
+                    StatusLabel.Text = "Вы не дали согласие на обработку Ваших данных!";
+                    StatusLabel.ForeColor = System.Drawing.Color.Red;
+                }
             }
-            catch { } // Добавить вывод информации о ошибке
+            catch (Exception ex)
+            {
+                StatusLabel.Text = ex.Message;
+                StatusLabel.ForeColor = System.Drawing.Color.Red; 
+            }
+
+            StatusLabel.Visible = true;
         }
     }
 }
