@@ -22,6 +22,13 @@ namespace Survey
             string connectionString = ConfigurationManager.ConnectionStrings["DBConnection"].ConnectionString;
             connection = new SqlConnection(connectionString);
             connection.Open();
+
+            using (UserContext db = new UserContext())
+            {
+                var users = db.Users;
+                foreach (User u in users)
+                    Response.Write(u.FirstName + " " + u.LastName);
+            }
         }
 
         protected void Page_Unload(object sender, EventArgs e)
@@ -34,16 +41,41 @@ namespace Survey
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("INSERT INTO Users(" +
+                /* 
+                 *  SqlCommand cmd = new SqlCommand("INSERT INTO Users(" +
                     "FirstName, LastName, NameCompetition, WorkNominationText, WorkNominationValue," +
                     "Discipline, Tested, testedLVL, CompanyName, Position, City, Region, Phone, Email, Statistic)" +
                     "VALUES(@FirstName, @LastName, @NameCompetition, @WorkNominationText, @WorkNominationValue," +
                     "@Discipline, @Tested, @testedLVL, @CompanyName, @Position, @City, @Region, @Phone, @Email, @Statistic)",
                     connection);
-
+                */
                 if (CheckBox1.Checked)
                 {
-                    cmd.Parameters.AddWithValue("FirstName", tbFirstName.Text);
+                    UserContext db = new UserContext();
+
+                    User user = new User()
+                    {
+                        FirstName = tbFirstName.Text,
+                        LastName = tbLastName.Text,
+                        NameCompetition = tbNameCompetition.Text,
+                        WorkNominationText = WorkNomination.SelectedItem.Text,
+                        WorkNominationValue = WorkNomination.SelectedItem.Value,
+                        Discipline = tbDiscipline.Text,
+                        Tested = tbTested.Text,
+                        testedLVL = tbTestLVL.Text,
+                        CompanyName = tbCompany.Text,
+                        Position = tbPosition.Text,
+                        City = tbCity.Text,
+                        Region = tbRegion.Text,
+                        Phone = tbPhone.Text,
+                        Email = tbEmail.Text,
+                        Statistic = RadioButtonList1.SelectedItem.Text
+                    };
+
+                    db.Users.Add(user);
+                    db.SaveChanges();
+
+                    /* cmd.Parameters.AddWithValue("FirstName", tbFirstName.Text);
                     cmd.Parameters.AddWithValue("LastName", tbLastName.Text);
                     cmd.Parameters.AddWithValue("NameCompetition", tbNameCompetition.Text);
                     cmd.Parameters.AddWithValue("WorkNominationText", tbFirstName.Text);
@@ -59,8 +91,8 @@ namespace Survey
                     cmd.Parameters.AddWithValue("Email", tbFirstName.Text);
                     cmd.Parameters.AddWithValue("Statistic", tbFirstName.Text);
 
-                    cmd.ExecuteNonQuery();
-                }
+                    cmd.ExecuteNonQuery();*/
+                } 
             }
             catch { } // Добавить вывод информации о ошибке
         }

@@ -128,6 +128,7 @@
         <br />
         <br />
         <asp:Button ID="btnSend" runat="server" Text="Отправить" OnClick="btnSend_Click" />
+    &nbsp;<asp:Label ID="StatusLabel" runat="server" Text="" Visible="False"></asp:Label>
     </form>
 </body>
 </html>
