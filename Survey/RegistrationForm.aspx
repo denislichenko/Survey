@@ -6,8 +6,9 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-<!-- <link rel="stylesheet" href="~/css/style.css" /> -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+<!-- <link rel="stylesheet" href="~/css/style.css" /> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>-->
+
 
 <title></title>
 </head>
@@ -126,7 +127,7 @@
 &nbsp;<asp:HyperLink ID="HyperLink1" runat="server">политикой конфиденциальности</asp:HyperLink>
         <br />
         <br />
-        <asp:Button ID="btnSend" runat="server" Text="Отправить" />
+        <asp:Button ID="btnSend" runat="server" Text="Отправить" OnClick="btnSend_Click" />
     </form>
 </body>
 </html>
