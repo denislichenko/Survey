@@ -21,7 +21,7 @@
         <div>
             <table class="auto-style1">
                 <tr>
-                    <td class="auto-style2">Фамилия</td>
+                    <td class="auto-style2">* Фамилия</td>
                     <td>
                         <asp:TextBox ID="tbLastName" runat="server" Width="200px"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="LastNameRequiredFieldValidator" runat="server" 
@@ -33,7 +33,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">Имя и Отчество</td>
+                    <td class="auto-style2">* Имя и Отчество</td>
                     <td>
                         <asp:TextBox ID="tbFirstName" runat="server" Width="200px"></asp:TextBox>
                          <asp:RequiredFieldValidator ID="FirstNameRequiredFieldValidator1" runat="server" 
@@ -45,7 +45,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">Название конкурсной работы</td>
+                    <td class="auto-style2">* Название конкурсной работы</td>
                     <td>
                         <asp:TextBox ID="tbNameCompetition" runat="server" Width="200px"></asp:TextBox>
                          <asp:RequiredFieldValidator ID="CompetitionNameRequiredFieldValidator1" runat="server" 
@@ -69,7 +69,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">Дисциплина</td>
+                    <td class="auto-style2">* Дисциплина</td>
                     <td>
                         <asp:TextBox ID="tbDiscipline" runat="server" Width="200px"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="DisciplineRequiredFieldValidator" runat="server" 
@@ -81,7 +81,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">Была ли апробирована Ваша анкета (Да, Нет)?</td>
+                    <td class="auto-style2">* Была ли апробирована Ваша анкета (Да, Нет)?</td>
                     <td>
                         <asp:TextBox ID="tbTested" runat="server" Width="200px"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="TestedRequiredFieldValidator" runat="server" 
@@ -111,7 +111,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">Город, населенный пункт</td>
+                    <td class="auto-style2">* Город, населенный пункт</td>
                     <td>
                         <asp:TextBox ID="tbCity" runat="server" Width="200px"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="CityRequiredFieldValidator" runat="server" 
@@ -123,7 +123,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style3">Область</td>
+                    <td class="auto-style3">* Область</td>
                     <td class="auto-style4">
                         <asp:TextBox ID="tbRegion" runat="server" Width="200px"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RegionRequiredFieldValidator" runat="server" 
@@ -135,7 +135,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">Мобильный телефон</td>
+                    <td class="auto-style2">* Мобильный телефон</td>
                     <td>
                         <asp:TextBox ID="tbPhone" runat="server" Width="200px"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="PhoneRequiredFieldValidator" runat="server" 
@@ -147,7 +147,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">Электронная почта</td>
+                    <td class="auto-style2">* Электронная почта</td>
                     <td>
                         <asp:TextBox ID="tbEmail" runat="server" Width="200px"></asp:TextBox>
                         <asp:RegularExpressionValidator ID="EmailRegularExpressionValidator" runat="server"
