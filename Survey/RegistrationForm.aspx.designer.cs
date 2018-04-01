@@ -31,6 +31,15 @@ namespace Survey {
         protected global::System.Web.UI.WebControls.TextBox tbLastName;
         
         /// <summary>
+        /// LastNameRequiredFieldValidator элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator LastNameRequiredFieldValidator;
+        
+        /// <summary>
         /// tbFirstName элемент управления.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,15 @@ namespace Survey {
         protected global::System.Web.UI.WebControls.TextBox tbFirstName;
         
         /// <summary>
+        /// FirstNameRequiredFieldValidator1 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator FirstNameRequiredFieldValidator1;
+        
+        /// <summary>
         /// tbNameCompetition элемент управления.
         /// </summary>
         /// <remarks>
@@ -47,6 +65,15 @@ namespace Survey {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbNameCompetition;
+        
+        /// <summary>
+        /// CompetitionNameRequiredFieldValidator1 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator CompetitionNameRequiredFieldValidator1;
         
         /// <summary>
         /// WorkNomination элемент управления.
@@ -67,6 +94,15 @@ namespace Survey {
         protected global::System.Web.UI.WebControls.TextBox tbDiscipline;
         
         /// <summary>
+        /// DisciplineRequiredFieldValidator элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator DisciplineRequiredFieldValidator;
+        
+        /// <summary>
         /// tbTested элемент управления.
         /// </summary>
         /// <remarks>
@@ -74,6 +110,15 @@ namespace Survey {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbTested;
+        
+        /// <summary>
+        /// TestedRequiredFieldValidator элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator TestedRequiredFieldValidator;
         
         /// <summary>
         /// tbTestLVL элемент управления.
@@ -112,6 +157,15 @@ namespace Survey {
         protected global::System.Web.UI.WebControls.TextBox tbCity;
         
         /// <summary>
+        /// CityRequiredFieldValidator элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator CityRequiredFieldValidator;
+        
+        /// <summary>
         /// tbRegion элемент управления.
         /// </summary>
         /// <remarks>
@@ -119,6 +173,15 @@ namespace Survey {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbRegion;
+        
+        /// <summary>
+        /// RegionRequiredFieldValidator элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RegionRequiredFieldValidator;
         
         /// <summary>
         /// tbPhone элемент управления.
@@ -130,6 +193,15 @@ namespace Survey {
         protected global::System.Web.UI.WebControls.TextBox tbPhone;
         
         /// <summary>
+        /// PhoneRequiredFieldValidator элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator PhoneRequiredFieldValidator;
+        
+        /// <summary>
         /// tbEmail элемент управления.
         /// </summary>
         /// <remarks>
@@ -137,6 +209,24 @@ namespace Survey {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbEmail;
+        
+        /// <summary>
+        /// EmailRegularExpressionValidator элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator EmailRegularExpressionValidator;
+        
+        /// <summary>
+        /// EmailRequiredFieldValidator элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator EmailRequiredFieldValidator;
         
         /// <summary>
         /// RadioButtonList1 элемент управления.

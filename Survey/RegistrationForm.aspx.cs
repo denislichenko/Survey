@@ -39,75 +39,78 @@ namespace Survey
 
         protected void btnSend_Click(object sender, EventArgs e)
         {
-            try
+            if (Page.IsValid)
             {
-                /* 
-                 *  SqlCommand cmd = new SqlCommand("INSERT INTO Users(" +
-                    "FirstName, LastName, NameCompetition, WorkNominationText, WorkNominationValue," +
-                    "Discipline, Tested, testedLVL, CompanyName, Position, City, Region, Phone, Email, Statistic)" +
-                    "VALUES(@FirstName, @LastName, @NameCompetition, @WorkNominationText, @WorkNominationValue," +
-                    "@Discipline, @Tested, @testedLVL, @CompanyName, @Position, @City, @Region, @Phone, @Email, @Statistic)",
-                    connection);
-                */
-                if (CheckBox1.Checked)
+                try
                 {
-                    UserContext db = new UserContext();
-
-                    User user = new User()
+                    /* 
+                     *  SqlCommand cmd = new SqlCommand("INSERT INTO Users(" +
+                        "FirstName, LastName, NameCompetition, WorkNominationText, WorkNominationValue," +
+                        "Discipline, Tested, testedLVL, CompanyName, Position, City, Region, Phone, Email, Statistic)" +
+                        "VALUES(@FirstName, @LastName, @NameCompetition, @WorkNominationText, @WorkNominationValue," +
+                        "@Discipline, @Tested, @testedLVL, @CompanyName, @Position, @City, @Region, @Phone, @Email, @Statistic)",
+                        connection);
+                    */
+                    if (CheckBox1.Checked)
                     {
-                        FirstName = tbFirstName.Text,
-                        LastName = tbLastName.Text,
-                        NameCompetition = tbNameCompetition.Text,
-                        WorkNominationText = WorkNomination.SelectedItem.Text,
-                        WorkNominationValue = WorkNomination.SelectedItem.Value,
-                        Discipline = tbDiscipline.Text,
-                        Tested = tbTested.Text,
-                        testedLVL = tbTestLVL.Text,
-                        CompanyName = tbCompany.Text,
-                        Position = tbPosition.Text,
-                        City = tbCity.Text,
-                        Region = tbRegion.Text,
-                        Phone = tbPhone.Text,
-                        Email = tbEmail.Text,
-                        Statistic = RadioButtonList1.SelectedItem.Text
-                    };
+                        UserContext db = new UserContext();
 
-                    db.Users.Add(user);
-                    db.SaveChanges();
+                        User user = new User()
+                        {
+                            FirstName = tbFirstName.Text,
+                            LastName = tbLastName.Text,
+                            NameCompetition = tbNameCompetition.Text,
+                            WorkNominationText = WorkNomination.SelectedItem.Text,
+                            WorkNominationValue = WorkNomination.SelectedItem.Value,
+                            Discipline = tbDiscipline.Text,
+                            Tested = tbTested.Text,
+                            testedLVL = tbTestLVL.Text,
+                            CompanyName = tbCompany.Text,
+                            Position = tbPosition.Text,
+                            City = tbCity.Text,
+                            Region = tbRegion.Text,
+                            Phone = tbPhone.Text,
+                            Email = tbEmail.Text,
+                            Statistic = RadioButtonList1.SelectedItem.Text
+                        };
 
-                    StatusLabel.Text = "Заявка успешно отправлена!";
+                        db.Users.Add(user);
+                        db.SaveChanges();
 
-                    /* cmd.Parameters.AddWithValue("FirstName", tbFirstName.Text);
-                    cmd.Parameters.AddWithValue("LastName", tbLastName.Text);
-                    cmd.Parameters.AddWithValue("NameCompetition", tbNameCompetition.Text);
-                    cmd.Parameters.AddWithValue("WorkNominationText", tbFirstName.Text);
-                    cmd.Parameters.AddWithValue("WorkNominationValue", tbFirstName.Text);
-                    cmd.Parameters.AddWithValue("Discipline", tbFirstName.Text);
-                    cmd.Parameters.AddWithValue("Tested", tbFirstName.Text);
-                    cmd.Parameters.AddWithValue("testedLVL", tbFirstName.Text);
-                    cmd.Parameters.AddWithValue("CompanyName", tbFirstName.Text);
-                    cmd.Parameters.AddWithValue("Position", tbFirstName.Text);
-                    cmd.Parameters.AddWithValue("City", tbFirstName.Text);
-                    cmd.Parameters.AddWithValue("Region", tbFirstName.Text);
-                    cmd.Parameters.AddWithValue("Phone", tbFirstName.Text);
-                    cmd.Parameters.AddWithValue("Email", tbFirstName.Text);
-                    cmd.Parameters.AddWithValue("Statistic", tbFirstName.Text);
+                        StatusLabel.Text = "Заявка успешно отправлена!";
 
-                    cmd.ExecuteNonQuery();*/
+                        /* cmd.Parameters.AddWithValue("FirstName", tbFirstName.Text);
+                        cmd.Parameters.AddWithValue("LastName", tbLastName.Text);
+                        cmd.Parameters.AddWithValue("NameCompetition", tbNameCompetition.Text);
+                        cmd.Parameters.AddWithValue("WorkNominationText", tbFirstName.Text);
+                        cmd.Parameters.AddWithValue("WorkNominationValue", tbFirstName.Text);
+                        cmd.Parameters.AddWithValue("Discipline", tbFirstName.Text);
+                        cmd.Parameters.AddWithValue("Tested", tbFirstName.Text);
+                        cmd.Parameters.AddWithValue("testedLVL", tbFirstName.Text);
+                        cmd.Parameters.AddWithValue("CompanyName", tbFirstName.Text);
+                        cmd.Parameters.AddWithValue("Position", tbFirstName.Text);
+                        cmd.Parameters.AddWithValue("City", tbFirstName.Text);
+                        cmd.Parameters.AddWithValue("Region", tbFirstName.Text);
+                        cmd.Parameters.AddWithValue("Phone", tbFirstName.Text);
+                        cmd.Parameters.AddWithValue("Email", tbFirstName.Text);
+                        cmd.Parameters.AddWithValue("Statistic", tbFirstName.Text);
+
+                        cmd.ExecuteNonQuery();*/
+                    }
+                    else
+                    {
+                        StatusLabel.Text = "Вы не дали согласие на обработку Ваших данных!";
+                        StatusLabel.ForeColor = System.Drawing.Color.Red;
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    StatusLabel.Text = "Вы не дали согласие на обработку Ваших данных!";
+                    StatusLabel.Text = ex.Message;
                     StatusLabel.ForeColor = System.Drawing.Color.Red;
                 }
-            }
-            catch (Exception ex)
-            {
-                StatusLabel.Text = ex.Message;
-                StatusLabel.ForeColor = System.Drawing.Color.Red; 
-            }
 
-            StatusLabel.Visible = true;
+                StatusLabel.Visible = true;
+            }
         }
     }
 }
