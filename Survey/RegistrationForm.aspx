@@ -5,14 +5,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
-<!-- <link rel="stylesheet" href="~/css/style.css" /> 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>-->
+    <!-- <link href="~/css/style.css" type="text/css" rel="stylesheet" /> -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
 
 
 <title></title>
 </head>
 <body>
+    <div class="header"></div>
     <ol class="breadcrumb">
       <li><a href="#">Админ-панель </a></li>
       <li class="active"> / Регистрация</li>
@@ -129,7 +129,7 @@
                         <asp:RequiredFieldValidator ID="RegionRequiredFieldValidator" runat="server" 
                             ErrorMessage="Это поле должно быть заполнено!" 
                             EnableClientScript="false" 
-                            ControlToValidate="Region"
+                            ControlToValidate="tbRegion"
                             ForeColor="Red">
                         </asp:RequiredFieldValidator>
                     </td>
