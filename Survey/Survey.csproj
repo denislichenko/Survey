@@ -95,6 +95,7 @@
     <None Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminLogin.aspx" />
     <Content Include="AdminPanel.aspx" />
     <Content Include="App_Data\DB.mdf" />
     <Content Include="App_Data\DB_log.ldf">
@@ -121,6 +122,15 @@
     <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\msvcr90.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.cs" />
+    <Compile Include="AdminContext.cs" />
+    <Compile Include="AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminPanel.aspx.cs">
       <DependentUpon>AdminPanel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -136,8 +146,8 @@
     <Compile Include="RegistrationForm.aspx.designer.cs">
       <DependentUpon>RegistrationForm.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User.cs" />
-    <Compile Include="UserContext.cs" />
+    <Compile Include="App_Code\User.cs" />
+    <Compile Include="App_Code\UserContext.cs" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
