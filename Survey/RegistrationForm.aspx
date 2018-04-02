@@ -7,8 +7,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <!-- <link href="~/css/style.css" type="text/css" rel="stylesheet" /> -->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
-
-
 <title></title>
 </head>
 <body>
