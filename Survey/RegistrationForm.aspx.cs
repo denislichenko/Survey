@@ -43,14 +43,6 @@ namespace Survey
             {
                 try
                 {
-                    /* 
-                     *  SqlCommand cmd = new SqlCommand("INSERT INTO Users(" +
-                        "FirstName, LastName, NameCompetition, WorkNominationText, WorkNominationValue," +
-                        "Discipline, Tested, testedLVL, CompanyName, Position, City, Region, Phone, Email, Statistic)" +
-                        "VALUES(@FirstName, @LastName, @NameCompetition, @WorkNominationText, @WorkNominationValue," +
-                        "@Discipline, @Tested, @testedLVL, @CompanyName, @Position, @City, @Region, @Phone, @Email, @Statistic)",
-                        connection);
-                    */
                     if (CheckBox1.Checked)
                     {
                         UserContext db = new UserContext();
@@ -78,24 +70,6 @@ namespace Survey
                         db.SaveChanges();
 
                         StatusLabel.Text = "Заявка успешно отправлена!";
-
-                        /* cmd.Parameters.AddWithValue("FirstName", tbFirstName.Text);
-                        cmd.Parameters.AddWithValue("LastName", tbLastName.Text);
-                        cmd.Parameters.AddWithValue("NameCompetition", tbNameCompetition.Text);
-                        cmd.Parameters.AddWithValue("WorkNominationText", tbFirstName.Text);
-                        cmd.Parameters.AddWithValue("WorkNominationValue", tbFirstName.Text);
-                        cmd.Parameters.AddWithValue("Discipline", tbFirstName.Text);
-                        cmd.Parameters.AddWithValue("Tested", tbFirstName.Text);
-                        cmd.Parameters.AddWithValue("testedLVL", tbFirstName.Text);
-                        cmd.Parameters.AddWithValue("CompanyName", tbFirstName.Text);
-                        cmd.Parameters.AddWithValue("Position", tbFirstName.Text);
-                        cmd.Parameters.AddWithValue("City", tbFirstName.Text);
-                        cmd.Parameters.AddWithValue("Region", tbFirstName.Text);
-                        cmd.Parameters.AddWithValue("Phone", tbFirstName.Text);
-                        cmd.Parameters.AddWithValue("Email", tbFirstName.Text);
-                        cmd.Parameters.AddWithValue("Statistic", tbFirstName.Text);
-
-                        cmd.ExecuteNonQuery();*/
                     }
                     else
                     {
