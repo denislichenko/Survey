@@ -31,7 +31,7 @@ namespace Survey
                     if(TextBox1.Text == adm.Login && TextBox2.Text == adm.Password && TextBox3.Text == adm.Pin)
                     {
                         HttpCookie login = new HttpCookie("login", TextBox1.Text);
-                        HttpCookie key = new HttpCookie("password", TextBox2.Text);
+                        HttpCookie key = new HttpCookie("password", MD5.CreateMD5(TextBox2.Text + "l0l_ah@h@a"));
 
                         Request.Cookies.Add(login);
                         Request.Cookies.Add(key);
