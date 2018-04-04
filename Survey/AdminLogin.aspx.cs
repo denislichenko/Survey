@@ -30,7 +30,11 @@ namespace Survey
                 {
                     if(TextBox1.Text == adm.Login && TextBox2.Text == adm.Password && TextBox3.Text == adm.Pin)
                     {
-                        Response.Write("Done!");
+                        HttpCookie login = new HttpCookie("login", TextBox1.Text);
+                        HttpCookie key = new HttpCookie("password", TextBox2.Text);
+
+                        Request.Cookies.Add(login);
+                        Request.Cookies.Add(key);
                     }
                 }
             }

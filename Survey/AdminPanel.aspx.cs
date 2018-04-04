@@ -12,7 +12,7 @@ namespace Survey
         protected void Page_Load(object sender, EventArgs e)
         {
             HttpCookie login = Request.Cookies["login"];
-            HttpCookie status = Request.Cookies["status"];
+            HttpCookie status = Request.Cookies["key"];
 
             if (login != null && status != null)
                 return;
