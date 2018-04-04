@@ -27,7 +27,8 @@ namespace Survey
                     }
                 }
             }
-            Response.Redirect("RegistrationForm.aspx");
+            // Если данные не совпали - редиректим на страницу логина
+            Response.Redirect("AdminLogin.aspx");
         }
     }
 }

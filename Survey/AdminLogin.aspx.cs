@@ -28,11 +28,17 @@ namespace Survey
 
                 foreach(Admin adm in admins)
                 {
+                    // Проверяем правильность введенных данных
                     if (TextBox1.Text == adm.Login && TextBox2.Text == adm.Password && TextBox3.Text == adm.Pin)
                     {
                         HttpCookie login = new HttpCookie("login", TextBox1.Text);
                         HttpCookie key = new HttpCookie("key", MD5.CreateMD5(TextBox2.Text + "l0l_ah@h@a"));
+                        
+                        // Срок службы куки файла - 1 час
+                        login.Expires.AddHours(1);
+                        key.Expires.AddHours(1);
 
+                        // Создаем куки файл на стороне клиента
                         Response.Cookies.Add(login);
                         Response.Cookies.Add(key);
                     }
