@@ -28,14 +28,15 @@ namespace Survey
 
                 foreach(Admin adm in admins)
                 {
-                    if(TextBox1.Text == adm.Login && TextBox2.Text == adm.Password && TextBox3.Text == adm.Pin)
+                    if (TextBox1.Text == adm.Login && TextBox2.Text == adm.Password && TextBox3.Text == adm.Pin)
                     {
                         HttpCookie login = new HttpCookie("login", TextBox1.Text);
-                        HttpCookie key = new HttpCookie("password", MD5.CreateMD5(TextBox2.Text + "l0l_ah@h@a"));
+                        HttpCookie key = new HttpCookie("key", MD5.CreateMD5(TextBox2.Text + "l0l_ah@h@a"));
 
-                        Request.Cookies.Add(login);
-                        Request.Cookies.Add(key);
+                        Response.Cookies.Add(login);
+                        Response.Cookies.Add(key);
                     }
+                    else errorLabel.Visible = true;
                 }
             }
 

@@ -42,11 +42,13 @@
                     <td class="auto-style2">&nbsp;</td>
                     <td class="auto-style2">
                         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Авторизоваться" Width="205px" />
-                    </td>
+                    &nbsp;<asp:Label ID="errorLabel" runat="server" ForeColor="Red" Text="Error" Visible="false" EnableViewState="false"></asp:Label> </td>
                 </tr>
             </table>
 
         </div>
     </form>
+    <p>
+        &nbsp;</p>
 </body>
 </html>
