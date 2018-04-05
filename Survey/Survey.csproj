@@ -101,6 +101,7 @@
     <Content Include="App_Data\DB_log.ldf">
       <DependentUpon>DB.mdf</DependentUpon>
     </Content>
+    <Content Include="css\admPanel.css" />
     <Content Include="css\style.css" />
     <Content Include="RegistrationForm.aspx" />
     <Content Include="Web.config" />
@@ -149,6 +150,9 @@
     </Compile>
     <Compile Include="App_Code\User.cs" />
     <Compile Include="App_Code\UserContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
