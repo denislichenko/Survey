@@ -10,9 +10,17 @@
     <link href="/css/admPanel.css" rel="stylesheet" />
 </head>
 <body>
+    <div class="header-menu">
+        <ul>
+            <li><a href="RegistrationForm.aspx">Форма регистрации</a></li>
+            <li><a href="CreateNewAdmin">Создать нового администратора</a></li>
+        </ul>
+    </div>
     <form id="form1" runat="server">
         <div class="container">
-            <h4>Зарегистрированные пользователи:</h4>
+            <div class="alert alert-primary" role="alert">
+                <h6>Зарегистрированные пользователи:</h6>
+            </div>
             <br />
             <asp:DetailsView ID="DetailsView1" runat="server" AllowPaging="True" AutoGenerateRows="False" CellPadding="4" DataKeyNames="Id" DataSourceID="SqlDataSource1" Font-Names="Arial" ForeColor="#333333" GridLines="None" Height="50px" Width="125px">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
