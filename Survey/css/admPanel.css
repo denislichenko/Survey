@@ -29,6 +29,10 @@
     color: #bcbcbc;
 }
 
+.alert {
+    max-height: 50px;
+}
+
 .alert-primary {
     margin-top: 20px;
     max-height: 50px; 
