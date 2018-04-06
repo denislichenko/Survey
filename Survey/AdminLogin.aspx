@@ -23,25 +23,25 @@
                 <tr>
                     <td>Логин:</td>
                     <td>
-                        <asp:TextBox ID="TextBox1" runat="server" Width="200px"></asp:TextBox>
+                        <asp:TextBox ID="tbLogin" runat="server" Width="200px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td>Пароль:</td>
                     <td>
-                        <asp:TextBox ID="TextBox2" runat="server" TextMode="Password" Width="200px"></asp:TextBox>
+                        <asp:TextBox ID="tbPassword" runat="server" TextMode="Password" Width="200px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style2">ПИН-код</td>
                     <td class="auto-style2">
-                        <asp:TextBox ID="TextBox3" runat="server" MaxLength="4" TextMode="Password" Width="200px"></asp:TextBox>
+                        <asp:TextBox ID="tbPIN" runat="server" MaxLength="4" TextMode="Password" Width="200px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style2">&nbsp;</td>
                     <td class="auto-style2">
-                        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Авторизоваться" Width="205px" />
+                        <asp:Button ID="LoginButton" runat="server" OnClick="Button1_Click" Text="Авторизоваться" Width="205px" />
                     &nbsp;<asp:Label ID="errorLabel" runat="server" ForeColor="Red" Text="Error" Visible="false" EnableViewState="false"></asp:Label> </td>
                 </tr>
             </table>

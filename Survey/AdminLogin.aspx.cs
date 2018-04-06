@@ -21,7 +21,7 @@ namespace Survey
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            if (TextBox1.Text != null && TextBox2.Text != null && TextBox3.Text != null)
+            if (tbLogin.Text != null && tbPassword.Text != null && tbPIN.Text != null)
             {
                 AdminContext db = new AdminContext();
                 var admins = db.Admins;
@@ -29,10 +29,10 @@ namespace Survey
                 foreach(Admin adm in admins)
                 {
                     // Проверяем правильность введенных данных
-                    if (TextBox1.Text == adm.Login && TextBox2.Text == adm.Password && TextBox3.Text == adm.Pin)
+                    if (tbLogin.Text == adm.Login && tbPassword.Text == adm.Password && tbPIN.Text == adm.Pin)
                     {
-                        HttpCookie login = new HttpCookie("login", TextBox1.Text);
-                        HttpCookie key = new HttpCookie("key", MD5.CreateMD5(TextBox2.Text + "l0l_ah@h@a"));
+                        HttpCookie login = new HttpCookie("login", tbLogin.Text);
+                        HttpCookie key = new HttpCookie("key", MD5.CreateMD5(tbPassword.Text + "l0l_ah@h@a"));
                         
                         // Срок службы куки файла - 1 час
                         login.Expires.AddHours(1);
@@ -41,6 +41,9 @@ namespace Survey
                         // Создаем куки файл на стороне клиента
                         Response.Cookies.Add(login);
                         Response.Cookies.Add(key);
+
+                        // В случае успешной авторизации редиректим пользователя на админ-панель
+                        Response.Redirect("AdminPanel.aspx");
                     }
                     else errorLabel.Visible = true;
                 }

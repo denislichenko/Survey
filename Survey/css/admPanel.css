@@ -1,3 +1,7 @@
-﻿.dangerZone p {
+﻿* {
+    background-color: ##dde8ff;
+}
+
+.dangerZone p {
     font-family: Arial;
 }
