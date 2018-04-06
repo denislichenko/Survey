@@ -3,6 +3,7 @@
     background-color: ##dde8ff;
 }
 
+/* Устанавливаем цвет фона меню, убираем отступы */
 .header-menu {
     min-height: 40px;
     background-color: #333333;
@@ -16,6 +17,7 @@
     float: left;
 }
 
+/* Убираем стандартную подсветку гиперссылок, настраиваем шрифты, выравниваем по центру*/
 .header-menu ul li a {
     text-decoration: none;
     color: white;
