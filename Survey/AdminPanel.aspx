@@ -13,7 +13,7 @@
     <div class="header-menu">
         <ul>
             <li><a href="RegistrationForm.aspx">Форма регистрации</a></li>
-            <li><a href="CreateNewAdmin">Создать нового администратора</a></li>
+            <li><a href="CreateNewAdminForm.aspx">Создать нового администратора</a></li>
         </ul>
     </div>
     <form id="form1" runat="server">
