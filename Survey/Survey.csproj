@@ -105,6 +105,7 @@
       <DependentUpon>DB.mdf</DependentUpon>
     </Content>
     <Content Include="css\admPanel.css" />
+    <Content Include="css\RegForm.css" />
     <Content Include="css\style.css" />
     <Content Include="RegistrationForm.aspx" />
     <Content Include="Web.config" />

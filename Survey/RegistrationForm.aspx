@@ -7,16 +7,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <!-- <link href="~/css/style.css" type="text/css" rel="stylesheet" /> -->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+    <link href="/css/RegForm.css" rel="stylesheet" />
 <title></title>
 </head>
 <body>
-    <div class="header"></div>
-    <ol class="breadcrumb">
-      <li><a href="#">Админ-панель </a></li>
-      <li class="active"> / Регистрация</li>
-    </ol>
+    <div class="header-menu">
+        <ul>
+            <li><a href="AdminPanel.aspx">Админ-панель</a></li>
+        </ul>
+    </div>
     <form id="form1" runat="server">
-        <div>
+        <div class="container content">
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style2">* Фамилия</td>
@@ -178,15 +179,18 @@
                         <asp:TextBox ID="tbOption" runat="server" Width="200px"></asp:TextBox>
                     </td>
                 </tr>
-            </table>
+            </table> 
+            <br />
+            <asp:CheckBox ID="CheckBox1" runat="server" Text="Я даю согласие на обработку моих личных данных и соглашаюсь с" />
+    &nbsp;<asp:HyperLink ID="HyperLink1" runat="server">политикой конфиденциальности</asp:HyperLink>
+            <br />
+            <br />
+            <asp:Button ID="btnSend" runat="server" Text="Отправить" OnClick="btnSend_Click" />
+        &nbsp;<asp:Label ID="StatusLabel" runat="server" Text="" Visible="False"></asp:Label>
         </div>
-        <br />
-        <asp:CheckBox ID="CheckBox1" runat="server" Text="Я даю согласие на обработку моих личных данных и соглашаюсь с" />
-&nbsp;<asp:HyperLink ID="HyperLink1" runat="server">политикой конфиденциальности</asp:HyperLink>
-        <br />
-        <br />
-        <asp:Button ID="btnSend" runat="server" Text="Отправить" OnClick="btnSend_Click" />
-    &nbsp;<asp:Label ID="StatusLabel" runat="server" Text="" Visible="False"></asp:Label>
     </form>
+    <div class="footer">
+            
+    </div>
 </body>
 </html>
