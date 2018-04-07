@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Z.EntityFramework.Plus;
 
 namespace Survey
 {
@@ -11,6 +12,7 @@ namespace Survey
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Получаем куки
             HttpCookie login = Request.Cookies["login"];
             HttpCookie key = Request.Cookies["key"];
 
@@ -29,6 +31,21 @@ namespace Survey
             }
             // Если данные не совпали - редиректим на страницу логина
             Response.Redirect("AdminLogin.aspx");
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int deleteInt = Convert.ToInt32(TextBox1.Text);
+                UserContext context = new UserContext();
+
+                // EF Plus
+                context.Users.Where(u => u.Id == deleteInt).Delete(); 
+            } catch (Exception ex)
+            {
+                Response.Write(ex.Message);
+            }
         }
     }
 }

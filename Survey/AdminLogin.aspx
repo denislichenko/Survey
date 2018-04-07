@@ -12,9 +12,17 @@
     <style type="text/css">
         .auto-style1 {
             width: 100%;
+            margin-top: 30px;
         }
         .auto-style2 {
             height: 26px;
+        }
+        .auto-style3 {
+            width: 158px;
+        }
+        .auto-style4 {
+            height: 26px;
+            width: 158px;
         }
     </style>
 </head>
@@ -25,28 +33,28 @@
         </ul>
     </div>
     <form id="form1" runat="server">
-        <div>
+        <div class="col-lg-10 offset-1">
             <table class="auto-style1">
                 <tr>
-                    <td>Логин:</td>
+                    <td class="auto-style3">Логин:</td>
                     <td>
                         <asp:TextBox ID="tbLogin" runat="server" Width="200px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
-                    <td>Пароль:</td>
+                    <td class="auto-style3">Пароль:</td>
                     <td>
                         <asp:TextBox ID="tbPassword" runat="server" TextMode="Password" Width="200px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">ПИН-код</td>
+                    <td class="auto-style4">ПИН-код</td>
                     <td class="auto-style2">
                         <asp:TextBox ID="tbPIN" runat="server" MaxLength="4" TextMode="Password" Width="200px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">&nbsp;</td>
+                    <td class="auto-style4">&nbsp;</td>
                     <td class="auto-style2">
                         <asp:Button ID="LoginButton" runat="server" OnClick="Button1_Click" Text="Авторизоваться" Width="205px" />
                     &nbsp;<asp:Label ID="errorLabel" runat="server" ForeColor="Red" Text="Error" Visible="false" EnableViewState="false"></asp:Label> </td>

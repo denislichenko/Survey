@@ -107,7 +107,7 @@
                     <tr>
                         <td class="auto-style3"></td>
                         <td class="auto-style4">
-                            <asp:Button ID="Button1" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Red" Text="DELETE" Width="211px" />
+                            <asp:Button ID="Button1" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Red" Text="DELETE" Width="211px" OnClick="Button1_Click" />
                         </td>
                     </tr>
                 </table>
