@@ -11,5 +11,6 @@ namespace Survey
         public string Login { get; set; }
         public string Password { get; set; }
         public string Pin { get; set; }
+        public int Level { get; set; }
     }
 }

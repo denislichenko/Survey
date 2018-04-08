@@ -8,6 +8,11 @@
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
 <link href="/css/admPanel.css" rel="stylesheet" />
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            height: 36px;
+        }
+    </style>
 </head>
 <body>
     <div class="header-menu">
@@ -22,31 +27,37 @@
             <tr>
                 <td>Login</td>
                 <td>
-                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="tbLogin" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td>Password</td>
                 <td>
-                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="tbPassword" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td>PIN</td>
+                <td class="auto-style1">PIN</td>
+                <td class="auto-style1">
+                    <asp:TextBox ID="tbPIN" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>Level</td>
                 <td>
-                    <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="tbLevel" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td>&nbsp;</td>
                 <td>
-                    <asp:Button ID="Button1" runat="server" Text="Button" />
+                    <asp:Button ID="createAdminButton" runat="server" Text="Create New Admin" OnClick="createAdminButton_Click" />
                 </td>
             </tr>
             <tr>
                 <td>&nbsp;</td>
                 <td>
-                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                    <asp:Label ID="errorLabel" runat="server" Text="" Visible="false"></asp:Label>
                 </td>
             </tr>
         </table>
