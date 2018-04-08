@@ -11,16 +11,11 @@ namespace Survey
 {
     public partial class AdminLogin : System.Web.UI.Page
     {
-        SqlConnection connection;
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            string connectionString = ConfigurationManager.ConnectionStrings["DBConnection"].ConnectionString;
-            connection = new SqlConnection(connectionString);
-            connection.Open();
-        }
+        protected void Page_Load(object sender, EventArgs e) { }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            // Если хотя-бы одно поле не заполнено - выводим сообщение о ошибке
             if (tbLogin.Text != null && tbPassword.Text != null && tbPIN.Text != null)
             {
                 AdminContext db = new AdminContext();

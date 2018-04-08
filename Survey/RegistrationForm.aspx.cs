@@ -17,10 +17,13 @@ namespace Survey
 
         protected void btnSend_Click(object sender, EventArgs e)
         {
+            // Если хотя-бы один валидатор вернул значение false - не делаем запрос на сервер
             if (Page.IsValid)
             {
                 try
                 {
+                    /* Если пользователь поставил галочку на CheckBox - продолжаем выполнение кода, 
+                       иначе выводим сообщение о ошибке */
                     if (CheckBox1.Checked)
                     {
                         UserContext db = new UserContext();
@@ -44,9 +47,11 @@ namespace Survey
                             Statistic = RadioButtonList1.SelectedItem.Text
                         };
 
+                        // Добавляем в таблицу строку со значениями полей, которые мы присвоили выше и сохраняем изменения
                         db.Users.Add(user);
                         db.SaveChanges();
 
+                        // Если все прошло успешно выводим сообщение
                         StatusLabel.Text = "Заявка успешно отправлена!";
                     }
                     else

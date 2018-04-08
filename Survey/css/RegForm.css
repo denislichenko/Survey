@@ -12,6 +12,7 @@
     padding: 0;
 }
 
+/* "Ложим" список, убираем нумерацию */
 .header-menu ul li {
     list-style: none;
     float: left;
@@ -27,14 +28,17 @@
     padding-right: 20px;
 }
 
+/* При наведении на ссылку цвет текста меняется на серый */
 .header-menu a:hover {
     color: #bcbcbc;
 }
 
+/* Отступ контента от меню - 30 пикселей*/
 .content {
     margin-top: 30px;
 }
 
+/* Отступ "футера" от контента - 30 пикселей */
 .footer {
     margin-top: 30px;
     width: 100%;
@@ -42,6 +46,7 @@
     background: #333333;
 }
 
+/* Максимальная допустимая высота для alert's - 50 пикселей*/
 .alert {
     max-height: 50px;
 }

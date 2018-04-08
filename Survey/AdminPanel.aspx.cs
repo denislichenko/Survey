@@ -16,6 +16,7 @@ namespace Survey
             HttpCookie login = Request.Cookies["login"];
             HttpCookie key = Request.Cookies["key"];
 
+            // Проверка на наличие куки-файла
             if (login != null)
             {
                 AdminContext db = new AdminContext();
@@ -37,12 +38,13 @@ namespace Survey
         {
             try
             {
-                int deleteInt = Convert.ToInt32(TextBox1.Text);
+                int deleteInt = Convert.ToInt32(TextBox1.Text); // ID, который нужно будет удалить
                 UserContext context = new UserContext();
 
                 // EF Plus
                 context.Users.Where(u => u.Id == deleteInt).Delete(); 
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 Response.Write(ex.Message);
             }
