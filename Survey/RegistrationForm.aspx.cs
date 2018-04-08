@@ -7,10 +7,6 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-/* TODO:
- * ДОПИЛИТЬ ЛОГИКУ И ПЕРЕПИСАТЬ НА ENTITY FRAMEWORK, 
- * ЛЕНИВАЯ ЖОПА! */
-
 namespace Survey
 {
     public partial class RegistrationForm : System.Web.UI.Page

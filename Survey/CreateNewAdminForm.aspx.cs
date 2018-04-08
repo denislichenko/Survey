@@ -14,15 +14,18 @@ namespace Survey
             HttpCookie login = Request.Cookies["login"];
             HttpCookie key = Request.Cookies["key"];
 
-            AdminContext context = new AdminContext();
-            var admins = context.Admins;
-
-            foreach(Admin admin in admins)
+            if (login != null)
             {
-                if(login.Value == admin.Login && key.Value == MD5.CreateMD5(admin.Password + "l0l_ah@h@a"))
+                AdminContext context = new AdminContext();
+                var admins = context.Admins;
+
+                foreach (Admin admin in admins)
                 {
-                    if (admin.Level > 1)
-                        return;
+                    if (login.Value == admin.Login && key.Value == MD5.CreateMD5(admin.Password + "l0l_ah@h@a"))
+                    {
+                        if (admin.Level > 1)
+                            return;
+                    }
                 }
             }
 

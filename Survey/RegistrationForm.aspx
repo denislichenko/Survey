@@ -175,8 +175,6 @@
                             <asp:ListItem>Еще вариант</asp:ListItem>
                             <asp:ListItem>Еще вариант</asp:ListItem>
                         </asp:RadioButtonList>
-                        Свой вариант:&nbsp;
-                        <asp:TextBox ID="tbOption" runat="server" Width="200px"></asp:TextBox>
                     </td>
                 </tr>
             </table> 
