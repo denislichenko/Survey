@@ -22,7 +22,10 @@
         </ul>
     </div>
     <form id="form1" runat="server">
-        <div class="container">
+        <div class="container content">
+            <div class="alert alert-primary" role="alert">
+                <h6>Добавление нового администратора</h6>
+            </div>
             <table class="w-100">
                 <tr>
                     <td>Login</td>

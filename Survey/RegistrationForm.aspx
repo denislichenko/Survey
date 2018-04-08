@@ -18,6 +18,9 @@
     </div>
     <form id="form1" runat="server">
         <div class="container content">
+             <div class="alert alert-primary" role="alert">
+                <h6>Заполните поля ниже!</h6>
+            </div>
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style2">* Фамилия</td>

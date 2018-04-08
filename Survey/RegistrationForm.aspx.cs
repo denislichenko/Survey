@@ -11,27 +11,9 @@ namespace Survey
 {
     public partial class RegistrationForm : System.Web.UI.Page
     {
-        SqlConnection connection;
+        protected void Page_Load(object sender, EventArgs e) { }
 
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            string connectionString = ConfigurationManager.ConnectionStrings["DBConnection"].ConnectionString;
-            connection = new SqlConnection(connectionString);
-            connection.Open();
-
-            using (UserContext db = new UserContext())
-            {
-                var users = db.Users;
-                foreach (User u in users)
-                    Response.Write(u.FirstName + " " + u.LastName);
-            }
-        }
-
-        protected void Page_Unload(object sender, EventArgs e)
-        {
-            if (connection.State != System.Data.ConnectionState.Closed)
-                connection.Close();
-        }
+        protected void Page_Unload(object sender, EventArgs e) { }
 
         protected void btnSend_Click(object sender, EventArgs e)
         {

@@ -41,3 +41,12 @@
     height: 50px;
     background: #333333;
 }
+
+.alert {
+    max-height: 50px;
+}
+
+.alert-primary {
+    margin-top: 20px;
+    max-height: 50px;
+}
