@@ -106,8 +106,11 @@
     </Content>
     <Content Include="CreateNewAdminForm.aspx" />
     <Content Include="css\admPanel.css" />
+    <Content Include="css\errors.css" />
     <Content Include="css\RegForm.css" />
     <Content Include="css\style.css" />
+    <Content Include="errors\404_Error.html" />
+    <Content Include="errors\505_Error.html" />
     <Content Include="RegistrationForm.aspx" />
     <Content Include="Web.config" />
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
