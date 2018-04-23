@@ -105,12 +105,13 @@
       <DependentUpon>DB.mdf</DependentUpon>
     </Content>
     <Content Include="CreateNewAdminForm.aspx" />
-    <Content Include="css\admPanel.css" />
-    <Content Include="css\errors.css" />
-    <Content Include="css\RegForm.css" />
-    <Content Include="css\style.css" />
+    <Content Include="Content\admPanel.css" />
+    <Content Include="Content\errors.css" />
+    <Content Include="Content\RegForm.css" />
+    <Content Include="Content\style.css" />
     <Content Include="errors\404_Error.html" />
     <Content Include="errors\505_Error.html" />
+    <Content Include="Global.asax" />
     <Content Include="RegistrationForm.aspx" />
     <Content Include="Web.config" />
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
@@ -154,6 +155,9 @@
     </Compile>
     <Compile Include="CreateNewAdminForm.aspx.designer.cs">
       <DependentUpon>CreateNewAdminForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrationForm.aspx.cs">

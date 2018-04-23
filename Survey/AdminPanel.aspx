@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
-    <link href="/css/admPanel.css" rel="stylesheet" />
+    <link href="/Content/admPanel.css" rel="stylesheet" />
 </head>
 <body>
     <div class="header-menu">
@@ -18,6 +18,9 @@
     </div>
     <form id="form1" runat="server">
         <div class="col-lg-10 offset-1" aria-checked="false">
+            <div class="alert alert-primary">
+                Текущий онлайн: <%= Application["CurrentOnline"] %>
+            </div>
             <div class="alert alert-primary" role="alert">
                 <h6>Зарегистрированные пользователи:</h6>
             </div>

@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <!-- <link href="~/css/style.css" type="text/css" rel="stylesheet" /> -->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
-    <link href="/css/RegForm.css" rel="stylesheet" />
+    <link href="/Content/RegForm.css" rel="stylesheet" />
 <title></title>
 </head>
 <body>
