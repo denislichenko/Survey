@@ -132,8 +132,8 @@
     <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\msvcr90.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Code\Admin.cs" />
-    <Compile Include="App_Code\AdminContext.cs" />
+    <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\AdminContext.cs" />
     <Compile Include="AdminLogin.aspx.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -167,8 +167,8 @@
     <Compile Include="RegistrationForm.aspx.designer.cs">
       <DependentUpon>RegistrationForm.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Code\User.cs" />
-    <Compile Include="App_Code\UserContext.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
